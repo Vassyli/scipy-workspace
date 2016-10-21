@@ -3985,6 +3985,8 @@ class TestCombinePvalues(TestCase):
         Z, p = stats.combine_pvalues([.01, .2, .3], method='stouffer',
                                      weights=np.array((1, 4, 9)))
         assert_approx_equal(p, 0.1464, significant=4)
+        
+       
 
 if __name__ == "__main__":
     run_module_suite()
